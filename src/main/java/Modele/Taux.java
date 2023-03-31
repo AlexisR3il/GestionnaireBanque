@@ -6,8 +6,14 @@ package Modele;
  * @version 1.0.0
  */
 public class Taux {
+
+    //Variable en String car problème au moment de convertir de String à int ou double
     String tauxApplique;
+
+    //Variable en String car problème au moment de convertir de String à int ou double
     String borneInferieur;
+
+    //Variable en String car problème au moment de convertir de String à int ou double
     String borneSuperieur;
     String nomTaux;
 

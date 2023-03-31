@@ -11,6 +11,8 @@ public class Transaction implements Serializable {
 
     String nom;
     Type type;
+
+    //Variable en String car problème au moment de convertir de String à int ou double
     String montant;
     public Transaction(String nom, Type type, String montant) {
         this.nom = nom;
