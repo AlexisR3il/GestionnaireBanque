@@ -1,45 +1,62 @@
 package Modele.Tests;
 
 import Modele.Taux;
-import Modele.Seuils;
+
+/**
+ * Classe qui va effectuer les tests unitaires sur la classe Taux
+ * @author Alexis RAVAYROL
+ * @version 1.0.0
+ */
 
 public class TestTaux {
 
-
     public static void testConstructeur() {
-        Seuils seuil = Seuils.inferieur;
-        Double tauxApplique = 13.0;
+        String borneInferieur = "0";
+        String borneSuperieur = "1000";
+        String tauxApplique = "13.0";
         String nomTaux = "niveau1";
 
-        Taux taux = new Taux(seuil, tauxApplique, nomTaux);
+        Taux taux = new Taux(borneInferieur, borneSuperieur, tauxApplique, nomTaux);
     }
 
-    public static void testGetSeuils() {
-        Seuils seuil = Seuils.inferieur;
-        Double tauxApplique = 13.0;
+    public static void testGetBorneInferieur() {
+        String borneInferieur = "0";
+        String borneSuperieur = "1000";
+        String tauxApplique = "13.0";
         String nomTaux = "niveau1";
 
-        Taux taux = new Taux(seuil, tauxApplique, nomTaux);
-        System.out.println(taux.getSeuils());
+        Taux taux = new Taux(borneInferieur, borneSuperieur, tauxApplique, nomTaux);
+        System.out.println(taux.getBorneInferieur());
+    }
 
+    public static void testGetBorneSuperieur() {
+        String borneInferieur = "0";
+        String borneSuperieur = "1000";
+        String tauxApplique = "13.0";
+        String nomTaux = "niveau1";
+
+        Taux taux = new Taux(borneInferieur, borneSuperieur, tauxApplique, nomTaux);
+        System.out.println(taux.getBorneSuperieur());
     }
 
     public static void testGetTaux() {
-        Seuils seuil = Seuils.inferieur;
-        Double tauxApplique = 13.0;
+        String borneInferieur = "0";
+        String borneSuperieur = "1000";
+        String tauxApplique = "13.0";
         String nomTaux = "niveau1";
 
-        Taux taux = new Taux(seuil, tauxApplique, nomTaux);
+        Taux taux = new Taux(borneInferieur, borneSuperieur, tauxApplique, nomTaux);
         System.out.println(taux.getTaux());
 
     }
 
     public static void testGetNomTaux() {
-        Seuils seuil = Seuils.inferieur;
-        Double tauxApplique = 13.0;
+        String borneInferieur = "0";
+        String borneSuperieur = "1000";
+        String tauxApplique = "13.0";
         String nomTaux = "niveau1";
 
-        Taux taux = new Taux(seuil, tauxApplique, nomTaux);
+        Taux taux = new Taux(borneInferieur, borneSuperieur, tauxApplique, nomTaux);
         System.out.println(taux.getNomTaux());
 
     }
@@ -47,7 +64,8 @@ public class TestTaux {
 
     public static void main(String[] args) {
         testConstructeur();
-        testGetSeuils();
+        testGetBorneInferieur();
+        testGetBorneSuperieur();
         testGetTaux();
         testGetNomTaux();
     }

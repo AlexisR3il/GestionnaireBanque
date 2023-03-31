@@ -11,8 +11,8 @@ public class Transaction implements Serializable {
 
     String nom;
     Type type;
-    Double montant;
-    public Transaction(String nom, Type type, Double montant) {
+    String montant;
+    public Transaction(String nom, Type type, String montant) {
         this.nom = nom;
         this.type = type;
         this.montant = montant;
@@ -27,6 +27,8 @@ public class Transaction implements Serializable {
     }
 
     public Double getMontant() {
-        return this.montant;
+        Double mont = Double.valueOf(montant);
+        return mont;
     }
+
 }
